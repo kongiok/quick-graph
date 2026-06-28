@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'shared/styles/themes.scss' as themes;
+@mixin define-palette($name, $colors) {
+  @each $key, $color in $colors {
+    @if $key == 'seed' {
+      --co-#{$name}-seed: #{$color};
+    } @else {
+      --co-#{$name}-#{$key}: #{$color};
+    }
+  }
+}
+:root {
+  @include define-palette('neutral', themes.$neutral);
+  @include define-palette('primary', themes.$primary);
+}
