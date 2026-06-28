@@ -19,6 +19,7 @@
     "@angular/router": "^22.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "typescript-result": "^3.5.2",
     "valibot": "^1.4.1"
   },
   "devDependencies": {

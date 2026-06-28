@@ -12,5 +12,5 @@ export const IconRef = v.variant('kind', [
 ]);
 export type IconRef = v.InferOutput<typeof IconRef>;
 
-export const ProfileName = v.pipe(v.string(), v.minLength(1), v.maxLength(255));
+export const ProfileName = v.pipe(v.string(), v.trim(), v.minLength(1), v.maxLength(255));
 export type ProfileName = v.InferOutput<typeof ProfileName>;

@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, Inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ProfileStore } from './core/profile/profile.store';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('quick-graph');
+  readonly profile = inject(ProfileStore);
 }
