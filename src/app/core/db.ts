@@ -10,6 +10,6 @@ export const db = new Dexie("Graph") as Dexie & {
 };
 db.version(1).stores({
   users: 'id, name',
-  projects: 'id, updatedAt, createdAt',
+  projects: 'id, userId, updatedAt, createdAt',
   cards: 'id, projectId, kind, updatedAt, [projectId+updatedAt]',
 });

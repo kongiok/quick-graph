@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: var(--co-neutral-99);
+  color: var(--co-neutral-10);
+  font-family: sans-serif;
+}
+
+.editor-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--co-neutral-90);
+  padding-bottom: 1rem;
+}
+
+.btn-back {
+  background: none;
+  border: 1px solid var(--co-neutral-80);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: var(--co-neutral-90);
+  }
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.editor-content {
+  background-color: var(--co-neutral-100);
+  border: 1px solid var(--co-neutral-90);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}

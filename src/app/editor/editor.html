@@ -1,0 +1,15 @@
+<div class="editor-shell">
+  <header class="editor-header">
+    <button class="btn-back" (click)="onBack()">← 返回專案列表</button>
+    <h2 class="project-title">{{ store.project()?.name }}</h2>
+  </header>
+  
+  <main class="editor-content">
+    <div class="card-preview">
+      <h3>預覽</h3>
+      <p>目前卡片 ID: {{ store.activeCard()?.id }}</p>
+      <p>目前卡片類型: {{ store.activeCard()?.kind }}</p>
+      <p>目前頁碼 (1-based): {{ store.currentPageIndex() + 1 }} / {{ store.cards().length }}</p>
+    </div>
+  </main>
+</div>
