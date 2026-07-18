@@ -1,14 +1,18 @@
-@use 'shared/styles/themes.scss' as themes;
-@mixin define-palette($name, $colors) {
-  @each $key, $color in $colors {
-    @if $key == 'seed' {
-      --co-#{$name}-seed: #{$color};
-    } @else {
-      --co-#{$name}-#{$key}: #{$color};
-    }
+@use 'scss-reset';
+@use 'assets/fonts';
+@use 'assets/styles' as graph;
+@use 'sass:map';
+
+@mixin export-color-scale($name, $scale) {
+  @each $tone, $value in $scale {
+    --co-#{$name}-#{$tone}: #{$value};
   }
 }
+
 :root {
-  @include define-palette('neutral', themes.$neutral);
-  @include define-palette('primary', themes.$primary);
+  @include export-color-scale('primary', graph.$primary);
+  @include export-color-scale('secondary', graph.$secondary);
+  @include export-color-scale('tertiary', graph.$tertiary);
+  @include export-color-scale('neutral', graph.$neutral);
+  @include export-color-scale('neutral-variant', graph.$neutral-variant);
 }

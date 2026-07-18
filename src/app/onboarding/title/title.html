@@ -1,0 +1,12 @@
+<section class="page">
+  <h1>{{ title }}</h1>
+  <div class="announcements">
+    <p>{{ intro }}</p>
+    <ul class="permissions">
+      <li><ng-icon class="icon do" name="featherCheckSquare" /><p>儲存你的名字（本地）</p></li>
+      <li><ng-icon class="icon do" name="featherCheckSquare" /><p>儲存你的專案記錄（本地）</p></li>
+      <li><ng-icon class="icon dont" name="featherXSquare" /><p>販賣你的靈魂</p></li>
+    </ul>
+  </div>
+  <button class="next-page" (click)="this.moveToNextStep.emit()" >Next<ng-icon class="icon" name="featherArrowRight" /></button>
+</section>

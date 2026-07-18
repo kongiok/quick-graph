@@ -1,0 +1,23 @@
+/* Angular CDK-aligned screen mixins */
+
+$handset: '(max-width: 599.98px) and (orientation: portrait), (max-width: 959.98px) and (orientation: landscape)';
+$tablet: '(min-width: 600px) and (max-width: 839.98px) and (orientation: portrait), (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape)';
+$desktop: '(min-width: 840px) and (orientation: portrait), (min-width: 1280px) and (orientation: landscape)';
+
+@mixin handset {
+  @media #{$handset} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}

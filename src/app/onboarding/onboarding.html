@@ -1,0 +1,4 @@
+@switch (processStep()){
+  @case ('ENTER') { <page-onboarding-name (submitName)="this.applyProfileName($event)" /> }
+  @case ('TITLE') { <page-onboarding-title (moveToNextStep)="this.processStep.set('ENTER')" /> }
+}

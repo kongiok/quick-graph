@@ -1,0 +1,21 @@
+<section class="page">
+  <h1>{{ title }}</h1>
+
+  <form class="enter" (ngSubmit)="onSubmit()">
+    <label class="enter__label" for="name">寫下你的名字吧！</label>
+    <!--<p class="enter__hint">之後會用這個名字和你打招呼。</p>-->
+
+    <div class="enter__field">
+      <input
+        id="name"
+        type="text"
+        [value]="draftName()"
+        (input)="onInput(($event.target).value)"
+        placeholder="例如 韓國瑜"
+        autocomplete="off"
+      />
+    </div>
+
+    <button class="enter__submit" type="submit">Next →</button>
+  </form>
+</section>

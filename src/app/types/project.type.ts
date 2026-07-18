@@ -5,11 +5,11 @@ export const ProjectID = v.pipe(v.string(), v.ulid());
 
 export type ProjectID = v.InferOutput<typeof ProjectID>;
 
-export const Project = v.object({
+export const ProjectRecord = v.object({
+  id: ProjectID,
   name: v.pipe(v.string(), v.minLength(1), v.maxLength(50)),
-  cardIds: v.array(CardID),
   createdAt: v.pipe(v.string(), v.isoDateTimeSecond()),
   updatedAt: v.pipe(v.string(), v.isoDateTimeSecond()),
 });
 
-export type Project = v.InferOutput<typeof Project>;
+export type ProjectRecord = v.InferOutput<typeof ProjectRecord>;
